@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{AF0CB4BA-F034-4FFC-A0C3-54A02846DEAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RedaX</RootNamespace>
+    <AssemblyName>RedaX</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>RedaX.ico</ApplicationIcon>
+    <StartupObject>RedaX.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CookComputing.XmlRpcV2">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Edis Teknoloji\RedaX\CookComputing.XmlRpcV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="blogInfo.cs" />
+    <Compile Include="Daytime.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_bekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_bekle.Designer.cs">
+      <DependentUpon>frm_bekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kategori.Designer.cs">
+      <DependentUpon>frm_kategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kelimeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kelimeler.Designer.cs">
+      <DependentUpon>frm_kelimeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_lisans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_lisans.Designer.cs">
+      <DependentUpon>frm_lisans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_makale_gonder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_makale_gonder.Designer.cs">
+      <DependentUpon>frm_makale_gonder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ozel_sisimler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ozel_sisimler.Designer.cs">
+      <DependentUpon>frm_ozel_sisimler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_site_yonetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_site_yonetimi.Designer.cs">
+      <DependentUpon>frm_site_yonetimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_splash.Designer.cs">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenelModul.cs" />
+    <Compile Include="IgetCatList.cs" />
+    <Compile Include="My\MyApplication.cs" />
+    <Compile Include="My\MyComputer.cs" />
+    <Compile Include="My\MyProject.cs" />
+    <Compile Include="My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My\MySettingsProperty.cs" />
+    <Compile Include="My\Resources\Resources.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resources" />
+    <EmbeddedResource Include="frm_bekle.resources" />
+    <EmbeddedResource Include="frm_kategori.resources" />
+    <EmbeddedResource Include="frm_kelimeler.resources" />
+    <EmbeddedResource Include="frm_lisans.resources" />
+    <EmbeddedResource Include="frm_makale_gonder.resources" />
+    <EmbeddedResource Include="frm_ozel_sisimler.resources" />
+    <EmbeddedResource Include="frm_site_yonetimi.resources" />
+    <EmbeddedResource Include="frm_splash.resources" />
+    <EmbeddedResource Include="Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
